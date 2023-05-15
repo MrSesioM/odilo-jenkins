@@ -1,0 +1,22 @@
+commit aafe203ef50e09d24495504d4a92c86f66fa7f3c
+tree e821a05c0f92a9a5921f23278c11592ae8c0323f
+parent 8ae476087045d137e4b3c0f512371d69ca57f34b
+author root <admin@example.com> 2023-05-12 14:02:14 +0200
+committer root <admin@example.com> 2023-05-12 14:02:14 +0200
+
+    Test git hook trigger 2
+
+
+:100644 100644 3065dc501a39b2238b611d50c35cab07cb0a98e6 03638d9fea358a5e18b49014480f9a46a940730b M	src/main/java/com/mycompany/app/App.java
+:100644 100644 4a84ce5d721c085502cbb57b29d8e25a85fb76de d80f966e35a8aa8f50f3ec73dabb7fbf59acc52b M	src/test/java/com/mycompany/app/AppTest.java
+commit 8ae476087045d137e4b3c0f512371d69ca57f34b
+tree 21ff71fbe11e889c9b7798fb97326144d679e5a8
+parent 316cf0db05ab7977cf88d58a3585c60e8cc688ce
+author root <admin@example.com> 2023-05-12 13:59:45 +0200
+committer root <admin@example.com> 2023-05-12 13:59:45 +0200
+
+    Test git hook trigger
+
+
+:100644 100644 f1ca7b71a91fbdecfacad18a29e358bc5c5d449d 3065dc501a39b2238b611d50c35cab07cb0a98e6 M	src/main/java/com/mycompany/app/App.java
+:100644 100644 1412ff5fb55e0b38adab0cbb954723443e6cc86c 4a84ce5d721c085502cbb57b29d8e25a85fb76de M	src/test/java/com/mycompany/app/AppTest.java

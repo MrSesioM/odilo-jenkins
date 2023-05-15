@@ -1,0 +1,162 @@
+Started by user [8mha:////4GxBLJvMdUGIyJ0bCoqZlHbAISzDUsAZnq8yLr7Dp4XRAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/maven_dsl
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/maven_dsl/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/jenkins-docs/simple-java-maven-app # timeout=10
+Fetching upstream changes from https://github.com/jenkins-docs/simple-java-maven-app
+ > git --version # timeout=10
+ > git --version # 'git version 2.30.2'
+ > git fetch --tags --force --progress -- https://github.com/jenkins-docs/simple-java-maven-app +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse origin/master^{commit} # timeout=10
+Checking out Revision 3763ade49cb4c327c241dcaed5abb47677395997 (origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 3763ade49cb4c327c241dcaed5abb47677395997 # timeout=10
+Commit message: "Merge pull request #559 from NotMyFault/maven-3.9.0"
+ > git rev-list --no-walk 3763ade49cb4c327c241dcaed5abb47677395997 # timeout=10
+[maven_dsl] $ /var/jenkins_home/tools/hudson.tasks.Maven_MavenInstallation/jenkins-maven/bin/mvn -B -DskipTests clean package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< com.mycompany.app:my-app >----------------------
+[INFO] Building my-app 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ my-app ---
+[INFO] Deleting /var/jenkins_home/workspace/maven_dsl/target
+[INFO] 
+[INFO] --- enforcer:3.2.1:enforce (enforce-maven) @ my-app ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] Rule 1: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] 
+[INFO] --- resources:3.3.0:resources (default-resources) @ my-app ---
+[INFO] skip non existing resourceDirectory /var/jenkins_home/workspace/maven_dsl/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ my-app ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 1 source file with javac [debug target 1.8] to target/classes
+[8mha:////4CGXBJgK/6UpJFa1eMqu4pR7farvPHOZVahDAvDBX0YbAAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING] bootstrap class path not set in conjunction with -source 8
+[INFO] 
+[INFO] --- resources:3.3.0:testResources (default-testResources) @ my-app ---
+[INFO] skip non existing resourceDirectory /var/jenkins_home/workspace/maven_dsl/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ my-app ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 1 source file with javac [debug target 1.8] to target/test-classes
+[8mha:////4CGXBJgK/6UpJFa1eMqu4pR7farvPHOZVahDAvDBX0YbAAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING] bootstrap class path not set in conjunction with -source 8
+[INFO] 
+[INFO] --- surefire:3.0.0:test (default-test) @ my-app ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ my-app ---
+[INFO] Building jar: /var/jenkins_home/workspace/maven_dsl/target/my-app-1.0-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.747 s
+[INFO] Finished at: 2023-05-11T13:45:27Z
+[INFO] ------------------------------------------------------------------------
+[8mha:////4CGXBJgK/6UpJFa1eMqu4pR7farvPHOZVahDAvDBX0YbAAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING] 
+[8mha:////4CGXBJgK/6UpJFa1eMqu4pR7farvPHOZVahDAvDBX0YbAAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING] Plugin validation issues were detected in 1 plugin(s)
+[8mha:////4CGXBJgK/6UpJFa1eMqu4pR7farvPHOZVahDAvDBX0YbAAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING] 
+[8mha:////4CGXBJgK/6UpJFa1eMqu4pR7farvPHOZVahDAvDBX0YbAAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING]  * org.apache.maven.plugins:maven-resources-plugin:3.3.0
+[8mha:////4CGXBJgK/6UpJFa1eMqu4pR7farvPHOZVahDAvDBX0YbAAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING] 
+[8mha:////4CGXBJgK/6UpJFa1eMqu4pR7farvPHOZVahDAvDBX0YbAAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING] For more or less details, use 'maven.plugin.validation' property with one of the values (case insensitive): [BRIEF, DEFAULT, VERBOSE]
+[8mha:////4CGXBJgK/6UpJFa1eMqu4pR7farvPHOZVahDAvDBX0YbAAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING] 
+[maven_dsl] $ /var/jenkins_home/tools/hudson.tasks.Maven_MavenInstallation/jenkins-maven/bin/mvn test
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< com.mycompany.app:my-app >----------------------
+[INFO] Building my-app 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.2.1:enforce (enforce-maven) @ my-app ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] Rule 1: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] 
+[INFO] --- resources:3.3.0:resources (default-resources) @ my-app ---
+[INFO] skip non existing resourceDirectory /var/jenkins_home/workspace/maven_dsl/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ my-app ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.0:testResources (default-testResources) @ my-app ---
+[INFO] skip non existing resourceDirectory /var/jenkins_home/workspace/maven_dsl/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ my-app ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- surefire:3.0.0:test (default-test) @ my-app ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.mycompany.app.AppTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.058 s - in com.mycompany.app.AppTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.599 s
+[INFO] Finished at: 2023-05-11T13:45:30Z
+[INFO] ------------------------------------------------------------------------
+[8mha:////4CGXBJgK/6UpJFa1eMqu4pR7farvPHOZVahDAvDBX0YbAAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING] 
+[8mha:////4CGXBJgK/6UpJFa1eMqu4pR7farvPHOZVahDAvDBX0YbAAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING] Plugin validation issues were detected in 1 plugin(s)
+[8mha:////4CGXBJgK/6UpJFa1eMqu4pR7farvPHOZVahDAvDBX0YbAAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING] 
+[8mha:////4CGXBJgK/6UpJFa1eMqu4pR7farvPHOZVahDAvDBX0YbAAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING]  * org.apache.maven.plugins:maven-resources-plugin:3.3.0
+[8mha:////4CGXBJgK/6UpJFa1eMqu4pR7farvPHOZVahDAvDBX0YbAAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING] 
+[8mha:////4CGXBJgK/6UpJFa1eMqu4pR7farvPHOZVahDAvDBX0YbAAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING] For more or less details, use 'maven.plugin.validation' property with one of the values (case insensitive): [BRIEF, DEFAULT, VERBOSE]
+[8mha:////4CGXBJgK/6UpJFa1eMqu4pR7farvPHOZVahDAvDBX0YbAAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING] 
+[maven_dsl] $ /bin/sh -xe /tmp/jenkins11669969162737784508.sh
++ echo ************RUNNING THE JAR************************
+************RUNNING THE JAR************************
++ java -jar /var/jenkins_home/workspace/mavn/target/my-app-1.0-SNAPSHOT.jar
+Error: Unable to access jarfile /var/jenkins_home/workspace/mavn/target/my-app-1.0-SNAPSHOT.jar
+Build step 'Execute shell' marked build as failure
+Archiving artifacts
+Recording test results
+[Checks API] No suitable checks publisher found.
+Sending e-mails to: ricardo.andre.gonzalez07@gmail.com
+ERROR: Couldn't connect to host, port: localhost, 25; timeout 60000
+com.sun.mail.util.MailConnectException: Couldn't connect to host, port: localhost, 25; timeout 60000;
+  nested exception is:
+	java.net.ConnectException: Connection refused (Connection refused)
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2210)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:722)
+	at jakarta.mail.Service.connect(Service.java:342)
+	at jakarta.mail.Service.connect(Service.java:222)
+	at jakarta.mail.Service.connect(Service.java:171)
+	at jakarta.mail.Transport.send0(Transport.java:230)
+	at jakarta.mail.Transport.send(Transport.java:100)
+	at hudson.tasks.MailSender.run(MailSender.java:131)
+	at hudson.tasks.Mailer.perform(Mailer.java:175)
+	at hudson.tasks.Mailer.perform(Mailer.java:138)
+	at hudson.tasks.BuildStepMonitor$1.perform(BuildStepMonitor.java:20)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.perform(AbstractBuild.java:818)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.performAllBuildSteps(AbstractBuild.java:767)
+	at hudson.model.Build$BuildExecution.post2(Build.java:179)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.post(AbstractBuild.java:711)
+	at hudson.model.Run.execute(Run.java:1925)
+	at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:44)
+	at hudson.model.ResourceController.execute(ResourceController.java:101)
+	at hudson.model.Executor.run(Executor.java:442)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:412)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:255)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:237)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.base/java.net.Socket.connect(Socket.java:609)
+	at com.sun.mail.util.SocketFetcher.createSocket(SocketFetcher.java:333)
+	at com.sun.mail.util.SocketFetcher.getSocket(SocketFetcher.java:214)
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2160)
+	... 18 more
+Finished: FAILURE

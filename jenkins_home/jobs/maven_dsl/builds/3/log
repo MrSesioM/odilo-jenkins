@@ -1,0 +1,76 @@
+Started by user [8mha:////4GxBLJvMdUGIyJ0bCoqZlHbAISzDUsAZnq8yLr7Dp4XRAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/maven_dsl
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/maven_dsl/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/jenkins-docs/simple-java-maven-app # timeout=10
+Fetching upstream changes from https://github.com/jenkins-docs/simple-java-maven-app
+ > git --version # timeout=10
+ > git --version # 'git version 2.30.2'
+ > git fetch --tags --force --progress -- https://github.com/jenkins-docs/simple-java-maven-app +refs/heads/*:refs/remotes/origin/* # timeout=10
+ERROR: Error fetching remote repo 'origin'
+hudson.plugins.git.GitException: Failed to fetch from https://github.com/jenkins-docs/simple-java-maven-app
+	at hudson.plugins.git.GitSCM.fetchFrom(GitSCM.java:1003)
+	at hudson.plugins.git.GitSCM.retrieveChanges(GitSCM.java:1245)
+	at hudson.plugins.git.GitSCM.checkout(GitSCM.java:1309)
+	at hudson.scm.SCM.checkout(SCM.java:540)
+	at hudson.model.AbstractProject.checkout(AbstractProject.java:1240)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.defaultCheckout(AbstractBuild.java:649)
+	at jenkins.scm.SCMCheckoutStrategy.checkout(SCMCheckoutStrategy.java:85)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.run(AbstractBuild.java:521)
+	at hudson.model.Run.execute(Run.java:1900)
+	at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:44)
+	at hudson.model.ResourceController.execute(ResourceController.java:101)
+	at hudson.model.Executor.run(Executor.java:442)
+Caused by: hudson.plugins.git.GitException: Command "git fetch --tags --force --progress -- https://github.com/jenkins-docs/simple-java-maven-app +refs/heads/*:refs/remotes/origin/*" returned status code 128:
+stdout: 
+stderr: error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
+fatal: expected flush after ref listing
+
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:2732)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandWithCredentials(CliGitAPIImpl.java:2109)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl$1.execute(CliGitAPIImpl.java:623)
+	at hudson.plugins.git.GitSCM.fetchFrom(GitSCM.java:1001)
+	... 11 more
+ERROR: Error fetching remote repo 'origin'
+Archiving artifacts
+Recording test results
+[Checks API] No suitable checks publisher found.
+Sending e-mails to: ricardo.andre.gonzalez07@gmail.com
+ERROR: Couldn't connect to host, port: localhost, 25; timeout 60000
+com.sun.mail.util.MailConnectException: Couldn't connect to host, port: localhost, 25; timeout 60000;
+  nested exception is:
+	java.net.ConnectException: Connection refused (Connection refused)
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2210)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:722)
+	at jakarta.mail.Service.connect(Service.java:342)
+	at jakarta.mail.Service.connect(Service.java:222)
+	at jakarta.mail.Service.connect(Service.java:171)
+	at jakarta.mail.Transport.send0(Transport.java:230)
+	at jakarta.mail.Transport.send(Transport.java:100)
+	at hudson.tasks.MailSender.run(MailSender.java:131)
+	at hudson.tasks.Mailer.perform(Mailer.java:175)
+	at hudson.tasks.Mailer.perform(Mailer.java:138)
+	at hudson.tasks.BuildStepMonitor$1.perform(BuildStepMonitor.java:20)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.perform(AbstractBuild.java:818)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.performAllBuildSteps(AbstractBuild.java:767)
+	at hudson.model.Build$BuildExecution.post2(Build.java:179)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.post(AbstractBuild.java:711)
+	at hudson.model.Run.execute(Run.java:1925)
+	at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:44)
+	at hudson.model.ResourceController.execute(ResourceController.java:101)
+	at hudson.model.Executor.run(Executor.java:442)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:412)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:255)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:237)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.base/java.net.Socket.connect(Socket.java:609)
+	at com.sun.mail.util.SocketFetcher.createSocket(SocketFetcher.java:333)
+	at com.sun.mail.util.SocketFetcher.getSocket(SocketFetcher.java:214)
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2160)
+	... 18 more
+Finished: FAILURE

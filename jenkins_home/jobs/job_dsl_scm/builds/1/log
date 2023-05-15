@@ -1,0 +1,60 @@
+Started by timer
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/job_dsl_scm
+The recommended git tool is: NONE
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/jenkins-docs/simple-java-maven-app
+ > git init /var/jenkins_home/workspace/job_dsl_scm # timeout=10
+Fetching upstream changes from https://github.com/jenkins-docs/simple-java-maven-app
+ > git --version # timeout=10
+ > git --version # 'git version 2.30.2'
+ > git fetch --tags --force --progress -- https://github.com/jenkins-docs/simple-java-maven-app +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/jenkins-docs/simple-java-maven-app # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git rev-parse origin/master^{commit} # timeout=10
+Checking out Revision 3763ade49cb4c327c241dcaed5abb47677395997 (origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 3763ade49cb4c327c241dcaed5abb47677395997 # timeout=10
+Commit message: "Merge pull request #559 from NotMyFault/maven-3.9.0"
+First time build. Skipping changelog.
+ > git tag -a -f -m Jenkins Build #1 jenkins-job_dsl_scm-1 # timeout=10
+FATAL: Could not apply tag jenkins-job_dsl_scm-1
+hudson.plugins.git.GitException: Command "git tag -a -f -m Jenkins Build #1 jenkins-job_dsl_scm-1" returned status code 128:
+stdout: 
+stderr: Committer identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'jenkins@9a69e99b5426.(none)')
+
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:2732)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:2658)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:2654)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommand(CliGitAPIImpl.java:1979)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommand(CliGitAPIImpl.java:1991)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.tag(CliGitAPIImpl.java:1852)
+Caused: hudson.plugins.git.GitException: Could not apply tag jenkins-job_dsl_scm-1
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.tag(CliGitAPIImpl.java:1854)
+	at hudson.plugins.git.GitAPI.tag(GitAPI.java:293)
+	at hudson.plugins.git.extensions.impl.PerBuildTag.onCheckoutCompleted(PerBuildTag.java:31)
+	at hudson.plugins.git.GitSCM.checkout(GitSCM.java:1394)
+	at hudson.scm.SCM.checkout(SCM.java:540)
+	at hudson.model.AbstractProject.checkout(AbstractProject.java:1240)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.defaultCheckout(AbstractBuild.java:649)
+	at jenkins.scm.SCMCheckoutStrategy.checkout(SCMCheckoutStrategy.java:85)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.run(AbstractBuild.java:521)
+	at hudson.model.Run.execute(Run.java:1900)
+	at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:44)
+	at hudson.model.ResourceController.execute(ResourceController.java:101)
+	at hudson.model.Executor.run(Executor.java:442)
+Finished: FAILURE

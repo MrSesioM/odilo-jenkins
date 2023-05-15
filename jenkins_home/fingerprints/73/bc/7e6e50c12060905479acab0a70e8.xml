@@ -1,0 +1,13 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2023-05-09 08:44:38.902 UTC</timestamp>
+  <md5sum>73bc7e6e50c12060905479acab0a70e8</md5sum>
+  <fileName>Credential id=git_user name=moises/******</fileName>
+  <usages>
+    <entry>
+      <string>maven-job</string>
+      <ranges>7-8</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

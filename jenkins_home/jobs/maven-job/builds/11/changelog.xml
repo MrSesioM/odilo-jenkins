@@ -1,0 +1,11 @@
+commit 596382ad38133637826f78352d3fce5d72504dc3
+tree 5521dddba4526b0bd578cb1e24f1a7517c7c84b5
+parent af69fdce3a08cc3cf129d33c6bd8c9e82f964b57
+author root <admin@example.com> 2023-05-10 14:38:07 +0200
+committer root <admin@example.com> 2023-05-10 14:38:07 +0200
+
+    Test git hook trigger
+
+
+:100644 100644 f1ca7b71a91fbdecfacad18a29e358bc5c5d449d b37ecfa51b2ad0ad29b609e2890d1ff2b3787905 M	src/main/java/com/mycompany/app/App.java
+:100644 100644 1412ff5fb55e0b38adab0cbb954723443e6cc86c 18f06f7fdb83dd17555d4bac5afd0286975ed9f5 M	src/test/java/com/mycompany/app/AppTest.java

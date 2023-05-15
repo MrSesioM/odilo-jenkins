@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Created-By: Maven Archiver 3.6.0
+Build-Jdk-Spec: 11
+Specification-Title: Strict Crumb Issuer Plugin
+Specification-Version: 2.1
+Implementation-Title: Strict Crumb Issuer Plugin
+Implementation-Version: 2.1.1
+Group-Id: org.jenkins-ci.plugins
+Artifact-Id: strict-crumb-issuer
+Short-Name: strict-crumb-issuer
+Long-Name: Strict Crumb Issuer Plugin
+Url: https://github.com/jenkinsci/strict-crumb-issuer-plugin
+Plugin-Version: 2.1.1
+Hudson-Version: 2.361.4
+Jenkins-Version: 2.361.4
+Plugin-Developers: 
+Plugin-License-Name: MIT License
+Plugin-License-Url: https://opensource.org/licenses/MIT
+Plugin-ScmConnection: scm:git:https://github.com/jenkinsci/strict-crumb-
+ issuer-plugin.git
+Plugin-ScmTag: strict-crumb-issuer-2.1.1
+Plugin-ScmUrl: https://github.com/jenkinsci/strict-crumb-issuer-plugin
+Plugin-GitHash: 45a6d1dabe2c3d8a1a1a404c192e2dcdf8e96954
+Implementation-Build: 45a6d1dabe2c3d8a1a1a404c192e2dcdf8e96954
+
